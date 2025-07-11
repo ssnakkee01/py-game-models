@@ -26,7 +26,6 @@ def main() -> None:
             defaults={"bonus": skill_data["bonus"]}
         )
 
-
     guild_data = player_data.get("guild")
     guild = None
     if guild_data:
