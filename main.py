@@ -26,14 +26,6 @@ def main() -> None:
             defaults={"bonus": skill_data["bonus"]}
         )
 
-    for skill_data in race_data.get("skills", []):
-        Skill.objects.get_or_create(
-            name=skill_data["name"],
-            race=race,
-            defaults={
-                "bonus": skill_data["bonus"]
-            }
-        )
 
     guild_data = player_data.get("guild")
     guild = None
@@ -55,9 +47,6 @@ def main() -> None:
             "created_at": timezone.now()
         }
     )
-
-    print(players_data)
-    print(type(players_data))
 
 
 if __name__ == "__main__":
