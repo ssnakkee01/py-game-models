@@ -6,7 +6,7 @@ from db.models import Player, Race, Skill, Guild
 import init_django_orm  # noqa: F401
 
 
-def main():
+def main() -> None:
     file_path = Path(__file__).parent / "players.json"
 
     with open(file_path, "r", encoding="utf-8") as file:
@@ -58,6 +58,7 @@ def main():
 
     print(players_data)
     print(type(players_data))
+
 
 if __name__ == "__main__":
     main()
